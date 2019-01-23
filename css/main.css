@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: burlywood;
+    
+}
+.grid {
+
+    display: grid;
+    grid-template-columns: 50px 150px auto 150px 50px;
+    grid-template-rows: 150px auto;
+    background-color: floralwhite;
+    grid-gap: 1em;
+}
+
+header {
+    grid-column: 2/5;
+    background: url("../Images/header.jpg") no-repeat;
+    background-size: cover;
+}
+
+.left-sidebar {
+    grid-column: 2/3;
+}
+
+.paragraphOrange {
+    display: block;
+    margin-bottom: 10px;
+    background-color: orange;
+}
+
+nav ul {
+    padding-left: 25px;
+}
+article img {
+    float: right;
+}
+
+
+
+.right-sidebar {
+    grid-column: 4/5;
+    text-align: center;
+}
+.right-sidebar p {
+    margin-bottom: 15px; 
+}
+
+@media all and (max-width: 700px) {
+    header,
+    .right-sidebar,
+    article,
+    .left-sidebar {
+      grid-column: 1 / 5;
+    }
+  }
